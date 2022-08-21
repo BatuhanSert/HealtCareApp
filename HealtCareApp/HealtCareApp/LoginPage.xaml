@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealtCareApp.LoginPage"
+             xmlns:local="clr-namespace:HealtCareApp"
+             BackgroundColor="#03011f"
+             >
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" >
+            <On Platform="iOS" Value="0,30,0,0" />
+            <On Platform="Android, UWP" Value="0,0,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ScrollView>
+
+    <StackLayout BackgroundColor="#03011f" VerticalOptions="Center" Padding="15">
+         <Frame BackgroundColor="#c84f37" CornerRadius="25" Padding="10" HasShadow="False">
+         <Frame BackgroundColor="#21213c" BorderColor="#2d161f" CornerRadius="23" Padding="12" HasShadow="True"  HorizontalOptions="FillAndExpand">
+             <StackLayout>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                     <Label Text="ATHEROMA" Grid.Row="0" TextDecorations="Strikethrough" TextColor="White" VerticalOptions="End" HorizontalTextAlignment="Center" FontFamily="Roboto" FontSize="48" Margin="0,0,0,0"/>
+                                     <Image Source="plak.png" HorizontalOptions="Center" Grid.Row="1" Margin="-45"/>
+                                     <local:RoundedEntry Grid.Row="2" Placeholder="abc@gmail.com" x:Name="entryUsername" Keyboard="Email" HeightRequest="60" FontFamily="Roboto" FontSize="20"/>
+                                     <local:RoundedEntry Grid.Row="3" Placeholder="******" x:Name="entryPassword" Keyboard="Default" IsPassword="True" HeightRequest="60" FontFamily="Roboto" FontSize="20"/>
+                                     <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Grid.Row="4" VerticalOptions="Center" Padding="0,0,10,0">
+                                        <Label Text="Remember me on device:" FontFamily="Roboto"
+                                            FontAttributes="Bold" FontSize="16" TextColor="White" Padding="0,5,0,0"/>
+                                        <Switch x:Name="switch" HorizontalOptions="EndAndExpand" OnColor="#c84f37"></Switch>
+                                     </StackLayout>
+                                    <Button x:Name="btnLogin" Grid.Row="5" Text="Log In" BackgroundColor="#c84f37" TextColor="White" FontFamily="Roboto" FontAttributes="Bold"
+                                        FontSize="20" CornerRadius="30" HeightRequest="60" Clicked="btnLogin_Clicked"/>
+                                    <Label Text="Sign Up" Grid.Row="6" VerticalOptions="End" x:Name="lblSignUp" FontFamily="Roboto" FontSize="18" FontAttributes="Bold" HorizontalOptions="End" Padding="0,0,25,0" TextColor="White">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </StackLayout>
+         </Frame>
+         </Frame>
+
+        <!--<StackLayout HorizontalOptions="Center">
+            <Label Text="LOGIN" FontFamily="Roboto" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center" Padding="0,20,0,0" TextColor="Black"/>
+            </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" Spacing="15"  Padding="30,20,30,0">
+
+            <local:RoundedEntry Placeholder="edt@eskisehir.edu.tr" x:Name="entryUsername" Keyboard="Email" HeightRequest="60" FontFamily="Roboto" FontSize="20"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <local:RoundedEntry Placeholder="******" x:Name="entryPassword" Keyboard="Default" IsPassword="True" HeightRequest="60" FontFamily="Roboto" FontSize="20">
+                </local:RoundedEntry>
+                <AbsoluteLayout
+                        Margin="0,5,20,0"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center">
+
+                                <Image
+                            HeightRequest="20"
+                            HorizontalOptions="EndAndExpand"
+                            Source="{local:ImageResource HealtCareApp.images.visibility.png}"
+                            WidthRequest="20">
+
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+             
+              </AbsoluteLayout>
+            </Grid>
+               
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Padding="0,0,10,0">
+                <Label Text="Remember me on device:" FontFamily="Roboto"
+                       FontAttributes="Bold" FontSize="16" TextColor="Black" Padding="0,5,0,0"/>
+                <Switch x:Name="switch" HorizontalOptions="EndAndExpand" OnColor="#4f2f2f"></Switch>
+            </StackLayout>
+
+            
+            <Button x:Name="btnLogin" Text="Log In" BackgroundColor="#4f2f2f" TextColor="White" FontFamily="Roboto" FontAttributes="Bold"
+                FontSize="20" CornerRadius="30" HeightRequest="60" Clicked="btnLogin_Clicked"/>
+            <Label Text="Sign Up" x:Name="lblSignUp" FontFamily="Roboto" FontSize="14" FontAttributes="Bold" HorizontalOptions="End" Padding="0,0,25,0" TextColor="Black">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>-->
+    </StackLayout>
+
+
+  </ScrollView>
+</ContentPage>
+<!--#f5f5f3-->
+        <!--<Frame BorderColor="#091010" CornerRadius="35" BackgroundColor="#446161" HasShadow="True" Margin="10">
+                        </Frame>-->

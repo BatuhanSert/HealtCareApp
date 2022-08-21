@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealtCareApp.Registration"
+             xmlns:local="clr-namespace:HealtCareApp"
+             BackgroundColor="#03011f">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,30,0,0" />
+            <On Platform="Android, UWP" Value="0,0,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+        <ScrollView >
+             <StackLayout BackgroundColor="#03011f" VerticalOptions="Center" Padding="15">
+                        <Frame BackgroundColor="#c84f37" CornerRadius="25" Padding="4" HasShadow="False">
+                        <Frame BackgroundColor="#21213c" BorderColor="#2d161f" CornerRadius="23" Padding="12" HasShadow="True"  HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="50" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                     <Label Text="Sign Up!" Grid.Row="0" Grid.ColumnSpan="2" TextDecorations="Strikethrough" TextColor="White" VerticalOptions="End" HorizontalTextAlignment="Center" FontFamily="Roboto" FontSize="48" Margin="0,0,0,0"/>
+                                     <Image Source="plak.png" HorizontalOptions="Center" Grid.Row="1" Grid.ColumnSpan="2" Margin="-45"/>
+                                     <local:RoundedEntry Grid.Row="2" Grid.ColumnSpan="2" Placeholder="Email" x:Name="entryUsername" Keyboard="Email" FontFamily="Roboto" FontSize="16" HeightRequest="60"/>
+                                     <local:RoundedEntry Grid.Row="3" Grid.Column="0" Placeholder="Password" x:Name="entryPassword" Keyboard="Default" IsPassword="True" FontFamily="Roboto" FontSize="16" HeightRequest="60" />
+                                     <local:RoundedEntry Grid.Row="3" Grid.Column="1" Placeholder="Confirm Password" x:Name="entryPasswordValidation" Keyboard="Default" IsPassword="True" FontFamily="Roboto" FontSize="16" HeightRequest="60" />
+                                     <local:RoundedEntry Grid.Row="4" Grid.ColumnSpan="2" Placeholder="Name" x:Name="entryName" Keyboard="Text" FontFamily="Roboto" FontSize="16" HeightRequest="60"/>
+                                     <local:RoundedEntry Grid.Row="5" Grid.ColumnSpan="2" Placeholder="Surname" x:Name="entrySurname" Keyboard="Text" FontFamily="Roboto" FontSize="16" HeightRequest="60"/>
+                                    <StackLayout Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                     <CheckBox x:Name="checkBox" Color="#c84f37"/>
+                                     <Label Text="I read the clarification text, I approve!" TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                                    </StackLayout>
+                                    <Button Text="Register" Grid.Row="7" Grid.ColumnSpan="2" TextColor="White" Background="#c84f37"
+                                            FontFamily="Roboto" FontAttributes="Bold" FontSize="24" CornerRadius="30" Clicked="Button_Clicked" HeightRequest="60"/>
+                                    <Label Text="Do you have account?" Grid.Row="8" Grid.ColumnSpan="2" x:Name="lblSignUp" FontFamily="Roboto" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" Padding="0,0,25,0" TextColor="White">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                            </Frame>
+
+        </StackLayout>
+        </ScrollView>
+
+</ContentPage>

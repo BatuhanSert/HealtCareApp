@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealtCareApp.EfeLogin"
+             xmlns:local="clr-namespace:HealtCareApp"
+             BackgroundColor="#636388"
+             >
+
+        <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,35,0,0" />
+            <On Platform="Android, UWP" Value="0,0,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+<!--<ScrollView>
+        <StackLayout BackgroundColor="#03011f">
+                <StackLayout Padding="0" Margin="0">
+                    <Frame BackgroundColor="#636388" HeightRequest="100" HorizontalOptions="FillAndExpand" Padding="0">
+                    </Frame>
+                </StackLayout>
+                <StackLayout>
+                    <StackLayout Padding="15">
+                        <Frame BackgroundColor="#c84f37" CornerRadius="25" Padding="4" HasShadow="False">
+                        <Frame BackgroundColor="#21213c" BorderColor="#2d161f" CornerRadius="23" Padding="12" HasShadow="True"  HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                     <Label Text="ATHEROMA" Grid.Row="0" TextDecorations="Strikethrough" TextColor="White" VerticalOptions="End" HorizontalTextAlignment="Center" FontFamily="Roboto" FontSize="48" Margin="0,0,0,0"/>
+                                     <Image Source="plak.png" HorizontalOptions="Center" Grid.Row="1" Margin="-45"/>
+                                     <local:RoundedEntry Grid.Row="2" Placeholder="abc@gmail.com" x:Name="entryUsername" Keyboard="Email" HeightRequest="60" FontFamily="Roboto" FontSize="20"/>
+                                     <local:RoundedEntry Grid.Row="3" Placeholder="******" x:Name="entryPassword" Keyboard="Default" IsPassword="True" HeightRequest="60" FontFamily="Roboto" FontSize="20"/>
+                                     <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Grid.Row="4" VerticalOptions="Center" Padding="0,0,10,0">
+                                        <Label Text="Remember me on device:" FontFamily="Roboto"
+                                            FontAttributes="Bold" FontSize="16" TextColor="White" Padding="0,5,0,0"/>
+                                        <Switch x:Name="switch" HorizontalOptions="EndAndExpand" OnColor="DeepSkyBlue"></Switch>
+                                     </StackLayout>
+                                    <Button x:Name="btnLogin" Grid.Row="5" Text="Log In" BackgroundColor="#c84f37" TextColor="White" FontFamily="Roboto" FontAttributes="Bold"
+                                        FontSize="20" CornerRadius="30" HeightRequest="60"/>
+                                    <Label Text="Sign Up" Grid.Row="6" VerticalOptions="End" x:Name="lblSignUp" FontFamily="Roboto" FontSize="18" FontAttributes="Bold" HorizontalOptions="End" Padding="0,0,25,0" TextColor="White">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                            </Frame>
+                    </StackLayout>
+                </StackLayout>
+        </StackLayout>
+    </ScrollView>-->
+</ContentPage>
